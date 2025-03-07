@@ -1,0 +1,41 @@
+name: Build and Upload to Artifactory
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set Up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+
+      - name: Set Up Gradle
+        uses: gradle/gradle-build-action@v3
+
+      - name: Grant Execute Permission for Gradle Wrapper
+        run: chmod +x gradlew
+
+      - name: Build Android Project
+        run: ./gradlew assembleRelease
+
+      - name: Upload Build Artifacts to Artifactory
+        run: |
+          curl -u ${{ secrets.ARTIFACTORY_USERNAME }}:${{ secrets.ARTIFACTORY_PASSWORD }} \
+            -T app/build/outputs/apk/release/app-release.apk \
+            "https://mytrail.jfrog.io/artifactory/test-my-artifacts-libs-release/com/artifact_testing_app/app-release.apk"
+
+    env:
+      ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
+      ARTIFACTORY_PASSWORD: ${{ secrets.ARTIFACTORY_PASSWORD }}
