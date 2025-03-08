@@ -30,15 +30,15 @@ jobs:
       - name: Build Android Project
         run: ./gradlew assembleRelease
 
+      - name: Check if APK exists
+        run: ls -l app/build/outputs/apk/release/
+
       - name: Verify APK Existence
         run: |
             if [ ! -f "app/build/outputs/apk/release/app-release.apk" ]; then
               echo "❌ APK file not found! Build may have failed."
               exit 1
             fi
-
-      - name: Check if APK exists
-        run: ls -l app/build/outputs/apk/release/
 
       - name: Upload Build Artifacts to Artifactory
         run: |
