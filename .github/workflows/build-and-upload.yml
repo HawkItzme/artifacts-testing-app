@@ -35,7 +35,7 @@ jobs:
 
       - name: Verify APK Existence
         run: |
-            if [ ! -f "app/build/outputs/apk/release/app-release.apk" ]; then
+            if [ ! -f "app/build/outputs/apk/release/app-release-unsigned.apk" ]; then
               echo "❌ APK file not found! Build may have failed."
               exit 1
             fi
