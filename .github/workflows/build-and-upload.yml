@@ -43,7 +43,7 @@ jobs:
       - name: Upload Build Artifacts to Artifactory
         run: |
           curl -u ${{ secrets.ARTIFACTORY_USERNAME }}:${{ secrets.ARTIFACTORY_PASSWORD }} \
-            -T app/build/outputs/apk/release/app-release.apk \
+            -T app/build/outputs/apk/release/app-release-unsigned.apk \
             "https://mytrail.jfrog.io/artifactory/test-my-artifacts-libs-release/com/artifact_testing_app/app-release-unsigned.apk"
 
     env:
