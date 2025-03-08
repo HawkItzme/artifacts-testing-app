@@ -44,7 +44,7 @@ jobs:
         run: |
           curl -u ${{ secrets.ARTIFACTORY_USERNAME }}:${{ secrets.ARTIFACTORY_PASSWORD }} \
             -T app/build/outputs/apk/release/app-release.apk \
-            "https://mytrail.jfrog.io/artifactory/test-my-artifacts-libs-release/com/artifact_testing_app/app-release.apk"
+            "https://mytrail.jfrog.io/artifactory/test-my-artifacts-libs-release/com/artifact_testing_app/app-release-unsigned.apk"
 
     env:
       ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
