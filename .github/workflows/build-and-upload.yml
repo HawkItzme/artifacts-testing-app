@@ -37,6 +37,9 @@ jobs:
               exit 1
             fi
 
+      - name: Check if APK exists
+        run: ls -l app/build/outputs/apk/release/
+
       - name: Upload Build Artifacts to Artifactory
         run: |
           curl -u ${{ secrets.ARTIFACTORY_USERNAME }}:${{ secrets.ARTIFACTORY_PASSWORD }} \
