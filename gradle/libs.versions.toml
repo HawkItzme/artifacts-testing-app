@@ -27,9 +27,7 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 retrofit = { module = "retrofit:retrofit", version.ref = "retrofit" }
-#Since we are storing the artifact in your local repository under the path:
-#https://mytrail.jfrog.io/artifactory/test-my-artifacts-libs-release/retrofit/retrofit/2.11.0/retrofit-2.11.0.jar
-glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+#glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

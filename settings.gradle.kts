@@ -1,10 +1,13 @@
 pluginManagement {
     repositories {
         maven {
-            url = uri("https://mytrail.jfrog.io/artifactory/test-my-artifacts-libs-release/")
+            //Hybrid Solution Dev URL
+            //  url = uri("https://trialrzp461.jfrog.io/artifactory/hybrid-virtual-repo/")
+            //Without Curation Catalog Repo URL
+            url = uri("https://trialrzp461.jfrog.io/artifactory/proj1-dev-virtual-repo/")
             credentials {
-                username = "secsyed83@gmail.com"
-                password = "Sec@syed0786"
+                username = "musarif@ebay.com"
+                password = "Mustafa@1234"
             }
         }
     }
@@ -14,10 +17,13 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS) // Ensures project-level repos are not allowed
     repositories {
         maven {
-            url = uri("https://mytrail.jfrog.io/artifactory/test-my-artifacts-libs-release/")
+            //Hybrid Solution Dev URL
+            //  url = uri("https://trialrzp461.jfrog.io/artifactory/hybrid-virtual-repo/")
+            //Without Curation Catalog Repo URL
+            url = uri("https://trialrzp461.jfrog.io/artifactory/proj1-dev-virtual-repo/")
             credentials {
-                username = "secsyed83@gmail.com"
-                password = "Sec@syed0786"
+                username = "musarif@ebay.com"
+                password = "Mustafa@1234"
             }
         }
     }
