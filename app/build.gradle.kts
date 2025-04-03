@@ -70,5 +70,5 @@ dependencies {
     //External Lib
     implementation(libs.retrofit)
 
-    //implementation(libs.glide)
+    implementation(libs.glide)
 }

@@ -2,9 +2,9 @@ pluginManagement {
     repositories {
         maven {
             //Hybrid Solution Dev URL
-            //  url = uri("https://trialrzp461.jfrog.io/artifactory/hybrid-virtual-repo/")
+              url = uri("https://trialrzp461.jfrog.io/artifactory/hybrid-virtual-repo/")
             //Without Curation Catalog Repo URL
-            url = uri("https://trialrzp461.jfrog.io/artifactory/proj1-dev-virtual-repo/")
+            //url = uri("https://trialrzp461.jfrog.io/artifactory/proj1-dev-virtual-repo/")
             credentials {
                 username = "musarif@ebay.com"
                 password = "Mustafa@1234"
@@ -18,9 +18,9 @@ dependencyResolutionManagement {
     repositories {
         maven {
             //Hybrid Solution Dev URL
-            //  url = uri("https://trialrzp461.jfrog.io/artifactory/hybrid-virtual-repo/")
+              url = uri("https://trialrzp461.jfrog.io/artifactory/hybrid-virtual-repo/")
             //Without Curation Catalog Repo URL
-            url = uri("https://trialrzp461.jfrog.io/artifactory/proj1-dev-virtual-repo/")
+            // url = uri("https://trialrzp461.jfrog.io/artifactory/proj1-dev-virtual-repo/")
             credentials {
                 username = "musarif@ebay.com"
                 password = "Mustafa@1234"
